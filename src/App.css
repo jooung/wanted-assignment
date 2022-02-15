@@ -1,0 +1,413 @@
+/* reset */
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, img {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body, code {
+    font-size: 12px;
+    font-weight: 300;
+    font-family: 'usual', sans-serif;
+    -webkit-text-size-adjust: none;
+}
+
+ul, ol, dl, li {
+    list-style: none;
+}
+
+img, fieldset {
+    border: 0;
+    vertical-align: top;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border: 0;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+table img {
+    vertical-align: middle;
+}
+
+th, td {
+    border: 0;
+    word-wrap: break-word;
+}
+
+input, select, textarea {
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+label {
+    cursor: pointer;
+}
+
+caption {
+    overflow: hidden;
+    width: 1px;
+    font-size: 1px;
+    line-height: 0;
+    text-indent: 150%;
+    white-space: nowrap;
+}
+
+legend, .blind {
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    font-size: 1px;
+    line-height: 0;
+    color: transparent;
+    text-indent: -150%;
+    white-space: nowrap;
+}
+
+hr.layout {
+    display: none;
+}
+
+button {
+    overflow: visible;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    background: transparent;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    text-decoration: none !important;
+}
+
+
+.wrap {
+}
+
+section.contents {
+    height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* tab */
+.tab-menu {
+    position: relative;
+}
+
+.tab-menu .list {
+    height: 100px;
+    align-items: flex-end;
+    display: flex;
+    flex-flow: wrap;
+    border-bottom: 1px solid #333;
+}
+
+.tab-menu .list .tabBtn {
+    font-size: 4em;
+    color: #c9c9c9;
+    padding: 10px 20px;
+    display: block;
+    border-radius: 50vh;
+    transition: .3s ease;
+    text-transform: capitalize;
+}
+
+.tab-menu .list li.on .tabBtn {
+    color: #000;
+    position: relative;
+}
+
+.tab-menu .list li.on .tabBtn:after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #000;
+    border-radius: 50vh;
+    position: absolute;
+    top: 0;
+}
+
+/* toggle */
+.toggle-area {
+    border-radius: 30px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    color: #000;
+    transition: .5s;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.toggle-area h2 {
+    font-size: 5em;
+    font-weight: normal;
+}
+
+.toggle-area.active {
+    background: #903EFF;
+}
+
+.toggle-area.active h2 {
+    color: #fff;
+}
+
+.toggle-btn {
+    position: relative;
+    background: #292A33;
+    width: 40px;
+    height: 70px;
+    border-radius: 25px;
+}
+
+.toggle-btn .indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 50vh;
+    transform: scale(.8);
+    transition: .5s;
+    cursor: pointer;
+}
+
+.toggle-btn.active {
+    background: #792EDE;
+}
+
+.toggle-btn.active .indicator {
+    top: 30px;
+}
+
+/* modal */
+.modal-area {
+}
+
+.modal-area button {
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 4em;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.modal-box {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 20%;
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.modal-box button {
+    font-size: 1.2em;
+    margin-top: 20px;
+    background: #000;
+    color: #fff;
+    border-radius: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+/* tag */
+.tag-area :where(li, li i, .details) {
+    display: flex;
+    align-items: center;
+}
+
+.tag-area {
+    width: 100%;
+    padding: 30px;
+}
+
+.tag-area p {
+    font-size: 15px;
+}
+
+.tag-area ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    border-radius: 15px;
+    border: 1px solid #dedfe2;
+}
+
+.tag-area ul li {
+    border-radius: 50vh;
+    background: #903EFF;
+    color: #fff;
+    margin: 5px;
+    padding: 5px 15px;
+    height: 30px;
+}
+
+.tag-area ul li i {
+    margin-left: 8px;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.tag-area ul input {
+    flex: 1;
+    border: none;
+    outline: none;
+    height: 30px;
+    margin: 10px 5px;
+}
+
+/* AutoComplete */
+.autoComplete-area {
+    width: calc(100% - 60px);
+    padding: 30px;
+}
+
+.autoComplete-area label {
+    font-size: 2em;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.autoComplete-area input {
+    width: 100%;
+    line-height: 80px;
+    text-align: center;
+    border: 1px solid #dedfe2;
+    outline: none;
+    border-radius: 15px;
+    font-size: 3em;
+}
+.search-results {
+    padding-top: 20px;
+}
+
+.search-results .name {
+    text-align: center;
+    font-size: 2em;
+    padding: 10px;
+}
+
+
+/* ClickToEdit */
+.clickToEdit-area {
+    flex: 1;
+    padding: 20vh 30px 30px;
+}
+
+.clickToEdit-area div {
+    margin-top: 30px;
+}
+
+.clickToEdit-area p {
+    font-size: 5em;
+    word-break: break-all;
+}
+
+.clickToEdit-area label {
+    width: 60px;
+    display: block;
+    line-height: 30px;
+    margin-top: 20px;
+}
+
+.clickToEdit-area input {
+    border-radius: 10px;
+    border: 1px solid #dedfe2;
+    outline: none;
+    height: 30px;
+    padding: 5px 10px;
+    width: calc(100% - 20px);
+}
+
+@media all and (max-width: 1280px) {
+    .tab-menu .list .tabBtn {
+        font-size: 3em;
+    }
+}
+
+@media all and (max-width: 800px) {
+    section.contents {
+        height: calc(100vh - 50px);
+    }
+
+    .tab-menu .list {
+        height: 50px;
+    }
+
+    .tab-menu .list .tabBtn {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    .modal-box {
+        width: 50%;
+    }
+
+    .autoComplete-area input {
+        line-height: 60px;
+        font-size: 1.4em;
+    }
+    .search-results .name {
+        font-size: 1em;
+    }
+
+}
+
+@media (max-width: 320px) {
+    section.contents {
+        height: 100vh;
+    }
+
+    .tab-menu .list {
+        flex-flow: column;
+        position: absolute;
+        top: 10px;
+        border: none;
+        align-items: flex-start;
+        height: fit-content;
+    }
+
+    .clickToEdit-area p {
+        font-size: 3em;
+    }
+}
